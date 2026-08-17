@@ -328,6 +328,9 @@ section { padding: 88px 0; }
   border-radius: var(--radius);
   overflow: hidden;
 }
+.work-card + .work-card {
+  margin-top: 24px;
+}
 
 .work-card-info {
   padding: 36px;
