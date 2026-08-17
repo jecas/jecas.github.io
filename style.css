@@ -318,6 +318,51 @@ section { padding: 88px 0; }
   font-size: 0.94rem;
 }
 
+/* Work examples */
+
+.work-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.work-card-info {
+  padding: 36px;
+}
+
+.work-card-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.work-card-info p {
+  color: var(--text-dim);
+  font-size: 1rem;
+  max-width: 62ch;
+}
+
+.work-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 28px;
+  padding: 0;
+}
+
+.work-tags li {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(110, 231, 199, 0.1);
+  border: 1px solid rgba(110, 231, 199, 0.25);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
 /* About */
 
 .o-meni-text { max-width: 68ch; }
