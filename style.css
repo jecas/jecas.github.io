@@ -347,6 +347,25 @@ section { padding: 88px 0; }
   max-width: 62ch;
 }
 
+.work-card--media {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.work-card-media {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  background: var(--bg-alt);
+  height: 100%;
+}
+
+.work-card-media img {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
 .work-tags {
   list-style: none;
   display: flex;
@@ -515,6 +534,7 @@ section { padding: 88px 0; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .process-list { grid-template-columns: 1fr; gap: 28px; }
   .kontakt-grid { grid-template-columns: 1fr; }
+  .work-card--media { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
