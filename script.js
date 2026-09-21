@@ -27,6 +27,7 @@ mainNav.querySelectorAll('a').forEach((link) => {
     'SEO optimizacija',
     'Hosting',
     'Desktop aplikacija',
+    'Chatbot',
     'Nešto drugo',
   ];
 
