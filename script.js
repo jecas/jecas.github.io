@@ -157,6 +157,10 @@ mainNav.querySelectorAll('a').forEach((link) => {
     formData.append('_subject', 'Novi upit sa Webnica chatbota');
     formData.append('_template', 'table');
     formData.append('_captcha', 'false');
+    formData.append(
+      '_autoresponse',
+      'Zdravo ' + inquiry.name.split(' ')[0] + ',\n\nHvala na upitu za "' + inquiry.service + '"! Uspešno je primljen — javljam se u najkraćem roku.\n\nWebnica'
+    );
     formData.append('Usluga', inquiry.service);
     formData.append('Ime', inquiry.name);
     formData.append('Email', inquiry.email);
