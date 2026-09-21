@@ -15,6 +15,16 @@ mainNav.querySelectorAll('a').forEach((link) => {
   });
 });
 
+/* Contact form: tell FormSubmit explicitly which field is the visitor's
+   email, so it knows where to send the auto-reply confirmation. */
+const contactForm = document.getElementById('contactForm');
+const contactReplyTo = document.getElementById('contactReplyTo');
+if (contactForm && contactReplyTo) {
+  contactForm.addEventListener('submit', () => {
+    contactReplyTo.value = document.getElementById('email').value;
+  });
+}
+
 /* Chat widget */
 
 (function () {
@@ -161,6 +171,7 @@ mainNav.querySelectorAll('a').forEach((link) => {
       '_autoresponse',
       'Zdravo ' + inquiry.name.split(' ')[0] + ',\n\nHvala na upitu za "' + inquiry.service + '"! Uspešno je primljen — javljam se u najkraćem roku.\n\nWebnica'
     );
+    formData.append('_replyto', inquiry.email);
     formData.append('Usluga', inquiry.service);
     formData.append('Ime', inquiry.name);
     formData.append('Email', inquiry.email);
